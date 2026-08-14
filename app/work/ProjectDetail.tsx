@@ -5,10 +5,9 @@ export default function ProjectDetail({ project }: { project: Project }) {
   const index = projects.findIndex((item) => item.slug === project.slug);
   const next = projects[(index + 1) % projects.length];
   const galleryImages = project.images.slice(2);
-  const galleryColumns = [
-    galleryImages.filter((_, imageIndex) => imageIndex % 2 === 0),
-    galleryImages.filter((_, imageIndex) => imageIndex % 2 === 1),
-  ];
+  const galleryRows = Array.from({ length: Math.ceil(galleryImages.length / 2) }, (_, rowIndex) =>
+    galleryImages.slice(rowIndex * 2, rowIndex * 2 + 2),
+  );
 
   return (
     <main className="detail-page">
@@ -41,14 +40,17 @@ export default function ProjectDetail({ project }: { project: Project }) {
             <img src={project.images[1]} alt={`${project.title}项目展示 2`} loading="lazy" />
           </figure>
         )}
-        <div className="detail-columns">
-          {galleryColumns.map((column, columnIndex) => (
-            <div className="detail-column" key={columnIndex}>
-              {column.map((image) => (
-                <figure key={image}>
+        <div className="detail-rows">
+          {galleryRows.map((row, rowIndex) => (
+            <div className={`detail-row${row.length === 1 ? " detail-row-single" : ""}`} key={rowIndex}>
+              {row.map((image, imageIndex) => {
+                const aspect = project.imageAspects[rowIndex * 2 + imageIndex + 2] ?? 16 / 9;
+                return (
+                <figure key={image} style={{ flexGrow: aspect, aspectRatio: String(aspect) }}>
                   <img src={image} alt={`${project.title}项目展示`} loading="lazy" />
                 </figure>
-              ))}
+                );
+              })}
             </div>
           ))}
         </div>
