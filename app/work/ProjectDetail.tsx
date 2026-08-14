@@ -16,6 +16,11 @@ export default function ProjectDetail({ project }: { project: Project }) {
         <div className="detail-shade" />
         <div className="detail-title"><small>{project.category} / {project.year}</small><h1>{project.title}</h1><p>{project.en}</p></div>
         <span className="detail-number">{project.number}</span>
+        <div className="detail-hero-stats">
+          <span><small>OUTPUT</small>{project.images.length} VISUALS</span>
+          <span><small>SCOPE</small>{project.services.length} FIELDS</span>
+          <span><small>EXPLORE</small>SCROLL ↓</span>
+        </div>
       </section>
 
       <section className="detail-intro">
@@ -25,14 +30,22 @@ export default function ProjectDetail({ project }: { project: Project }) {
       </section>
 
       <section className="detail-gallery">
-        {project.images.slice(1).map((image, imageIndex) => (
-          <figure className={imageIndex % 5 === 1 || imageIndex % 5 === 2 ? "half" : "wide"} key={image}>
-            <img src={image} alt={`${project.title}项目展示 ${imageIndex + 2}`} loading="lazy" />
+        <header className="detail-gallery-head"><small>SELECTED VISUALS</small><span>{project.images.length - 1} PROJECT FRAMES</span></header>
+        {project.images[1] && (
+          <figure className="gallery-feature">
+            <img src={project.images[1]} alt={`${project.title}项目展示 2`} loading="lazy" />
           </figure>
-        ))}
+        )}
+        <div className="detail-columns">
+          {project.images.slice(2).map((image, imageIndex) => (
+            <figure key={image}>
+              <img src={image} alt={`${project.title}项目展示 ${imageIndex + 3}`} loading="lazy" />
+            </figure>
+          ))}
+        </div>
       </section>
 
-      {!(["cdn", "xiaoxiao"].includes(project.slug)) && (
+      {!(["cdn", "type", "poster", "xiaoxiao"].includes(project.slug)) && (
         <section className="project-motion-slot">
           <div className="motion-play"><span>▶</span></div>
           <div><small>MOTION SLOT / 16:9</small><h2>动态演绎预留位</h2><p>后续可在这里加入品牌动画、三维转场、过程视频或完整项目影片。</p></div>
