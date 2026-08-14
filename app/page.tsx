@@ -58,11 +58,38 @@ export default function Home() {
       </section>
 
       <section className="intro stack-panel" id="about">
-        <div className="eyebrow"><b>01</b> ABOUT</div>
-        <div className="intro-title"><small>设计，是建立连接。</small><h2>让想法被看见，<br />让品牌被记住。</h2></div>
-        <div className="intro-copy">
-          <p>我是王振江，拥有 3 年品牌设计经验，专注品牌视觉、全案设计、字体标志与 IP 塑造。擅长从品牌定位出发，建立清晰、一致且具有情绪感染力的视觉系统。</p>
-          <div><span>品牌视觉</span><span>品牌全案</span><span>字体 LOGO</span><span>IP 设计</span></div>
+        <span className="about-watermark" aria-hidden="true">ABOUT / 01</span>
+        <header className="about-head">
+          <div className="eyebrow"><b>01</b> ABOUT</div>
+          <span className="about-status"><i /> OPEN TO WORK · 随时到岗</span>
+        </header>
+
+        <div className="about-core">
+          <figure className="about-portrait">
+            <img src="/assets/about.webp" alt="王振江个人形象" loading="lazy" />
+            <figcaption><span>WZJ</span><small>AI VISUAL / BRAND DESIGN</small></figcaption>
+          </figure>
+
+          <div className="intro-title">
+            <small>VISUAL × AI × BRAND</small>
+            <h2>让想法被看见，<br />让品牌被记住。</h2>
+            <div className="about-roles"><span>AI 视觉设计师</span><span>品牌视觉设计师</span></div>
+          </div>
+
+          <div className="intro-copy">
+            <p>我是王振江，拥有 2 年 10 个月品牌与 AI 视觉设计经验。擅长从品牌定位出发，搭建统一的视觉体系，并将 ComfyUI、Stable Diffusion、Seedance / Seedream 融入创意探索与商业视觉输出。</p>
+            <div className="about-facts">
+              <span><small>EXPERIENCE</small><strong>02Y 10M</strong></span>
+              <span><small>FOCUS</small><strong>AI × BRAND</strong></span>
+              <span><small>LOCATION</small><strong>河北 · 邯郸</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div className="about-foot">
+          <article><small>WORK EXPERIENCE</small><strong>北京舍贝智能科技有限公司</strong><p>AI 品牌视觉设计师 · 2023.07—2026.05</p></article>
+          <article><small>EDUCATION</small><strong>河北工业职业技术学院</strong><p>机械设计与制造（3D 打印）· 2020—2023</p></article>
+          <article><small>TOOLKIT</small><div><span>ComfyUI / SD</span><span>PS / AI</span><span>AE / PR</span><span>GPT</span></div></article>
         </div>
       </section>
 
