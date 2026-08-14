@@ -1,3 +1,5 @@
+import ScrollEffects from "./ScrollEffects";
+
 const projects = [
   { slug: "cdn", number: "01", title: "西顿照明", en: "CDN LIGHTING", category: "品牌视觉设计", cover: "/projects/cdn/01.webp", summary: "定义光的价值，成就空间的未来。" },
   { slug: "guihe", number: "02", title: "归和", en: "GUIHE", category: "品牌全案设计", cover: "/projects/guihe/01.webp", summary: "顺时而养，自然而生。" },
@@ -13,7 +15,8 @@ function Arrow() {
 export default function Home() {
   return (
     <main>
-      <section className="home-hero" id="top">
+      <ScrollEffects />
+      <section className="home-hero stack-panel" id="top">
         <div className="hero-media" aria-hidden="true" />
         <header className="site-nav">
           <a className="wordmark" href="#top" aria-label="返回首页">
@@ -54,7 +57,7 @@ export default function Home() {
         <div className="hero-foot"><span>PORTFOLIO © 2026</span><span>SCROLL TO EXPLORE ↓</span></div>
       </section>
 
-      <section className="intro" id="about">
+      <section className="intro stack-panel" id="about">
         <div className="eyebrow"><b>01</b> ABOUT</div>
         <div className="intro-title"><small>设计，是建立连接。</small><h2>让想法被看见，<br />让品牌被记住。</h2></div>
         <div className="intro-copy">
@@ -63,7 +66,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="selected" id="work">
+      <section className="selected stack-panel" id="work">
         <header className="selected-head">
           <div className="eyebrow"><b>02</b> SELECTED WORK</div>
           <h2>从视觉识别到<br />完整品牌体验。</h2>
@@ -82,13 +85,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="philosophy" id="philosophy">
+      <section className="philosophy stack-panel" id="philosophy">
         <div className="eyebrow"><b>03</b> DESIGN APPROACH</div>
         <blockquote>“好的设计应建立人与品牌之间的情感连接，让用户在看到设计时，理解其背后的故事和理念。”</blockquote>
         <div className="philosophy-steps"><span><b>01</b>洞察</span><span><b>02</b>策略</span><span><b>03</b>视觉</span><span><b>04</b>体验</span></div>
       </section>
 
-      <section className="motion-preview" id="motion">
+      <section className="motion-preview stack-panel" id="motion">
         <header className="motion-screen-head">
           <div className="eyebrow"><b>04</b> MOTION LAB</div>
           <h2>动态作品<br /><em>独立展映。</em></h2>
@@ -109,7 +112,7 @@ export default function Home() {
         <a className="motion-all" href="/motion">进入完整动态作品区 <Arrow /></a>
       </section>
 
-      <section className="home-contact" id="contact">
+      <section className="home-contact stack-panel" id="contact">
         <small>AVAILABLE FOR NEW PROJECTS</small>
         <h2>有想法，<br /><em>一起把它做出来。</em></h2>
         <a href="mailto:2898870015@qq.com">2898870015@qq.com <Arrow /></a>

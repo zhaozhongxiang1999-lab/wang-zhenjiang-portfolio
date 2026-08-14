@@ -4,6 +4,11 @@ import { projects } from "./project-data";
 export default function ProjectDetail({ project }: { project: Project }) {
   const index = projects.findIndex((item) => item.slug === project.slug);
   const next = projects[(index + 1) % projects.length];
+  const galleryImages = project.images.slice(2);
+  const galleryColumns = [
+    galleryImages.filter((_, imageIndex) => imageIndex % 2 === 0),
+    galleryImages.filter((_, imageIndex) => imageIndex % 2 === 1),
+  ];
 
   return (
     <main className="detail-page">
@@ -37,10 +42,14 @@ export default function ProjectDetail({ project }: { project: Project }) {
           </figure>
         )}
         <div className="detail-columns">
-          {project.images.slice(2).map((image, imageIndex) => (
-            <figure key={image}>
-              <img src={image} alt={`${project.title}项目展示 ${imageIndex + 3}`} loading="lazy" />
-            </figure>
+          {galleryColumns.map((column, columnIndex) => (
+            <div className="detail-column" key={columnIndex}>
+              {column.map((image) => (
+                <figure key={image}>
+                  <img src={image} alt={`${project.title}项目展示`} loading="lazy" />
+                </figure>
+              ))}
+            </div>
           ))}
         </div>
       </section>
