@@ -56,14 +56,6 @@ export default function ProjectDetail({ project }: { project: Project }) {
         </div>
       </section>
 
-      {!(["cdn", "type", "poster", "xiaoxiao"].includes(project.slug)) && (
-        <section className="project-motion-slot">
-          <div className="motion-play"><span>▶</span></div>
-          <div><small>MOTION SLOT / 16:9</small><h2>动态演绎预留位</h2><p>后续可在这里加入品牌动画、三维转场、过程视频或完整项目影片。</p></div>
-          <a href="/#motion">查看首页动态作品区 ↗</a>
-        </section>
-      )}
-
       <a className="next-project" href={`/work/${next.slug}`}>
         <small>NEXT PROJECT / {next.number}</small><span>下一个项目</span><h2>{next.title}</h2><b>→</b>
       </a>
