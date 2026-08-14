@@ -20,7 +20,7 @@ export default function Home() {
             <strong>WZJ</strong><span>王振江<br />BRAND DESIGNER</span>
           </a>
           <nav aria-label="主要导航">
-            <a href="#work">作品</a><a href="/motion">动态</a><a href="#about">关于</a>
+            <a href="#work">作品</a><a href="#motion">动态</a><a href="#about">关于</a>
           </nav>
           <a className="nav-contact" href="mailto:2898870015@qq.com">联系我 <Arrow /></a>
         </header>
@@ -46,7 +46,7 @@ export default function Home() {
             <a className="menu-card menu-philosophy" href="#philosophy">
               <small>03 / APPROACH</small><h2>设计理念</h2><span>连接品牌与人</span><Arrow />
             </a>
-            <a className="menu-card menu-motion" href="/motion">
+            <a className="menu-card menu-motion" href="#motion">
               <small>04 / MOTION LAB</small><h2>动态作品</h2><span>预留视频展映空间</span><Arrow />
             </a>
           </div>
@@ -88,14 +88,25 @@ export default function Home() {
         <div className="philosophy-steps"><span><b>01</b>洞察</span><span><b>02</b>策略</span><span><b>03</b>视觉</span><span><b>04</b>体验</span></div>
       </section>
 
-      <section className="motion-preview">
-        <div className="motion-preview-image" />
-        <div className="motion-preview-copy">
+      <section className="motion-preview" id="motion">
+        <header className="motion-screen-head">
           <div className="eyebrow"><b>04</b> MOTION LAB</div>
-          <h2>让作品<br />动起来。</h2>
-          <p>为品牌动态、视频包装、三维演绎和过程展示预留的独立展映空间，可持续加入后续动态作品。</p>
-          <a href="/motion">进入动态作品区 <Arrow /></a>
+          <h2>动态作品<br /><em>独立展映。</em></h2>
+          <p>品牌动画、三维演绎与项目影片统一集中在这一屏，避免分散到单个项目中。后续视频可直接替换下方位置。</p>
+        </header>
+        <div className="motion-screen-stage">
+          <a className="motion-main-slot" href="/motion" aria-label="进入动态作品页面">
+            <div className="motion-main-play">▶</div>
+            <span>FEATURED MOTION / 16:9</span>
+            <strong>动态主作品预留位</strong>
+            <small>COMING SOON</small>
+          </a>
+          <div className="motion-side-slots">
+            <a href="/motion"><span>01</span><div><small>BRAND MOTION</small><strong>品牌动态</strong></div><Arrow /></a>
+            <a href="/motion"><span>02</span><div><small>3D / PROCESS</small><strong>三维与过程影片</strong></div><Arrow /></a>
+          </div>
         </div>
+        <a className="motion-all" href="/motion">进入完整动态作品区 <Arrow /></a>
       </section>
 
       <section className="home-contact" id="contact">
