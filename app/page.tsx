@@ -90,6 +90,10 @@ export default function Home() {
           <article><small>WORK EXPERIENCE</small><strong>北京舍贝智能科技有限公司</strong><p>AI 品牌视觉设计师 · 2023.07—2026.05</p></article>
           <article><small>EDUCATION</small><strong>河北工业职业技术学院</strong><p>机械设计与制造（3D 打印）· 2020—2023</p></article>
           <article><small>TOOLKIT</small><div><span>ComfyUI / SD</span><span>PS / AI</span><span>AE / PR</span><span>GPT</span></div></article>
+          <aside className="about-qr">
+            <span className="about-qr-code" role="img" aria-label="王振江微信二维码" />
+            <div><small>WECHAT</small><strong>扫码联系我</strong></div>
+          </aside>
         </div>
       </section>
 

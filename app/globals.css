@@ -63,7 +63,7 @@ img { display:block; max-width:100%; }
 .about-portrait:after { content:""; position:absolute; inset:14px; border:1px solid rgba(239,184,117,.16); pointer-events:none; }
 .about-portrait img { position:absolute; max-width:none; width:auto; height:180%; left:-27%; top:-28%; filter:saturate(.72) contrast(1.04); transition:.8s cubic-bezier(.16,1,.3,1); }
 .about-portrait:hover img { transform:scale(1.025); }
-.about-portrait figcaption { position:absolute; z-index:1; left:22px; right:22px; bottom:19px; padding-top:13px; border-top:1px solid rgba(255,255,255,.19); display:flex; align-items:end; justify-content:space-between; }
+.about-portrait figcaption { position:absolute; z-index:1; left:22px; right:22px; top:20px; padding-bottom:13px; border-bottom:1px solid rgba(255,255,255,.19); display:flex; align-items:start; justify-content:space-between; }
 .about-portrait figcaption span { color:var(--gold); font:24px Georgia,serif; }
 .about-portrait figcaption small { color:rgba(255,255,255,.5); font-size:7px; letter-spacing:.18em; }
 .intro-title small { color:var(--orange); font-size:11px; letter-spacing:.24em; }
@@ -77,7 +77,7 @@ img { display:block; max-width:100%; }
 .about-facts>span+span { padding-left:12px; border-left:1px solid #312b26; }
 .about-facts small { display:block; margin-bottom:9px; color:#5f5750; font-size:6px; letter-spacing:.18em; }
 .about-facts strong { color:#d8d0c7; font:400 11px Georgia,serif; letter-spacing:.08em; white-space:nowrap; }
-.about-foot { position:relative; z-index:1; display:grid; grid-template-columns:1.15fr 1fr 1fr; border-top:1px solid #312b26; }
+.about-foot { position:relative; z-index:1; display:grid; grid-template-columns:1.15fr 1fr 1fr .56fr; border-top:1px solid #312b26; }
 .about-foot article { min-width:0; padding:20px 25px 0 0; }
 .about-foot article+article { padding-left:25px; border-left:1px solid #312b26; }
 .about-foot article>small { display:block; margin-bottom:12px; color:var(--orange); font-size:7px; letter-spacing:.2em; }
@@ -85,6 +85,11 @@ img { display:block; max-width:100%; }
 .about-foot article>p { margin:8px 0 0; color:#6f675f; font-size:9px; letter-spacing:.08em; }
 .about-foot article>div { display:flex; flex-wrap:wrap; gap:7px; }
 .about-foot article>div span { padding:6px 9px; border:1px solid #332d27; color:#898078; font-size:8px; }
+.about-qr { min-width:0; padding:15px 0 0 24px; border-left:1px solid #312b26; display:flex; align-items:center; justify-content:flex-end; gap:13px; }
+.about-qr-code { flex:0 0 auto; width:88px; height:88px; border:5px solid #f4eee5; background:url('/assets/about.webp') 32.4% 24.5%/600% auto no-repeat; }
+.about-qr div { min-width:0; }
+.about-qr small { display:block; margin-bottom:8px; color:var(--orange); font-size:6px; letter-spacing:.2em; }
+.about-qr strong { display:block; color:#bdb4aa; font-size:9px; font-weight:400; white-space:nowrap; }
 
 /* project index */
 .selected { background:var(--paper); color:#181410; padding:140px clamp(20px,5vw,78px) 160px; }
@@ -244,7 +249,8 @@ img { display:block; max-width:100%; }
   .about-portrait { grid-row:1 / span 2; }
   .intro-copy { grid-column:2; }
   .about-foot { grid-template-columns:1fr 1fr; }
-  .about-foot article:last-child { grid-column:1 / -1; margin-top:22px; padding-left:0; border-left:0; }
+  .about-foot article:last-of-type { grid-column:1; margin-top:22px; padding-left:0; border-left:0; }
+  .about-qr { grid-column:2; margin-top:22px; }
   .project-row { grid-template-columns:150px 42px 1fr 90px; }
   .project-row>p { display:none; }
   .motion-preview { grid-template-columns:1fr; grid-template-rows:auto auto auto; padding-top:110px; }
@@ -276,6 +282,8 @@ img { display:block; max-width:100%; }
   .about-facts>span+span { padding-left:0; border-left:0; border-top:1px solid #312b26; }
   .about-foot { display:block; margin-top:65px; }
   .about-foot article,.about-foot article+article,.about-foot article:last-child { padding:22px 0 0; margin:0 0 28px; border-left:0; }
+  .about-qr { padding:22px 0 0; border-left:0; border-top:1px solid #312b26; justify-content:flex-start; }
+  .about-qr-code { width:100px; height:100px; }
   .selected { padding:100px 17px; }
   .selected-head { display:block; margin-bottom:50px; }
   .selected-head h2 { margin:38px 0 20px; }
