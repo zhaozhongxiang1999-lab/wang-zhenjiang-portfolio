@@ -29,12 +29,12 @@ export default function Home() {
         </header>
 
         <div className="hero-layout">
-          <a className="hero-feature" href="#work" aria-label="浏览五个精选项目">
+          <a className="hero-feature" href="#work" aria-label="浏览精选项目">
             <div className="hero-rings" aria-hidden="true" />
             <div className="hero-feature-copy">
               <small>SELECTED PORTFOLIO</small>
-              <strong>05</strong>
-              <p>五类设计实践</p>
+              <strong className="hero-focus"><span>AI VISUAL</span><i>×</i><span>BRAND DESIGN</span></strong>
+              <p>视觉 · 品牌 · 动态</p>
             </div>
             <span className="hero-action">查看全部作品 <Arrow /></span>
           </a>
