@@ -125,22 +125,23 @@ export default function Home() {
       <section className="motion-preview stack-panel" id="motion">
         <header className="motion-screen-head">
           <div className="eyebrow"><b>04</b> MOTION LAB</div>
-          <h2>动态作品<br /><em>独立展映。</em></h2>
-          <p>品牌动画、三维演绎与项目影片统一集中在这一屏，避免分散到单个项目中。后续视频可直接替换下方位置。</p>
+          <h2>AIGC 短片<br /><em>三部展映。</em></h2>
+          <p>从轻喜剧、情感叙事到暗黑幻想，集中呈现短片精选剪辑、关键画面与生成工作流。</p>
         </header>
         <div className="motion-screen-stage">
-          <a className="motion-main-slot" href="/motion" aria-label="进入动态作品页面">
+          <a className="motion-main-slot" href="/motion#bee" aria-label="查看小蜜蜂短片">
+            <img className="motion-slot-poster" src="/motion/bee-poster.jpg" alt="" />
             <div className="motion-main-play">▶</div>
-            <span>FEATURED MOTION / 16:9</span>
-            <strong>动态主作品预留位</strong>
-            <small>COMING SOON</small>
+            <span>FEATURED / AIGC SILENT COMEDY</span>
+            <strong>《小蜜蜂》</strong>
+            <small>精选片段 00:20 · 原片 04:15</small>
           </a>
           <div className="motion-side-slots">
-            <a href="/motion"><span>01</span><div><small>BRAND MOTION</small><strong>品牌动态</strong></div><Arrow /></a>
-            <a href="/motion"><span>02</span><div><small>3D / PROCESS</small><strong>三维与过程影片</strong></div><Arrow /></a>
+            <a href="/motion#grandpa"><img className="motion-slot-poster" src="/motion/grandpa-poster.jpg" alt="" /><span>02</span><div><small>EMOTIONAL STORY</small><strong>《爷爷的愿望》</strong></div><Arrow /></a>
+            <a href="/motion#shuhua"><img className="motion-slot-poster" src="/motion/shuhua-poster.jpg" alt="" /><span>03</span><div><small>DARK FANTASY</small><strong>《我叫舒画》</strong></div><Arrow /></a>
           </div>
         </div>
-        <a className="motion-all" href="/motion">进入完整动态作品区 <Arrow /></a>
+        <a className="motion-all" href="/motion">查看精选剪辑与创作过程 <Arrow /></a>
       </section>
 
       <section className="home-contact stack-panel" id="contact">
