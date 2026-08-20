@@ -126,7 +126,7 @@ export default function Home() {
         <header className="motion-screen-head">
           <div className="eyebrow"><b>04</b> MOTION LAB</div>
           <h2>AIGC 短片<br /><em>三部展映。</em></h2>
-          <p>从轻喜剧、情感叙事到暗黑幻想，集中呈现短片精选剪辑、关键画面与生成工作流。</p>
+          <p>从轻喜剧、情感叙事到暗黑幻想，三部完整短片与生成工作流集中展映。</p>
         </header>
         <div className="motion-screen-stage">
           <a className="motion-main-slot" href="/motion#bee" aria-label="查看小蜜蜂短片">
@@ -134,14 +134,14 @@ export default function Home() {
             <div className="motion-main-play">▶</div>
             <span>FEATURED / AIGC SILENT COMEDY</span>
             <strong>《小蜜蜂》</strong>
-            <small>精选片段 00:20 · 原片 04:15</small>
+            <small>完整影片 04:15</small>
           </a>
           <div className="motion-side-slots">
             <a href="/motion#grandpa"><img className="motion-slot-poster" src="/motion/grandpa-poster.jpg" alt="" /><span>02</span><div><small>EMOTIONAL STORY</small><strong>《爷爷的愿望》</strong></div><Arrow /></a>
             <a href="/motion#shuhua"><img className="motion-slot-poster" src="/motion/shuhua-poster.jpg" alt="" /><span>03</span><div><small>DARK FANTASY</small><strong>《我叫舒画》</strong></div><Arrow /></a>
           </div>
         </div>
-        <a className="motion-all" href="/motion">查看精选剪辑与创作过程 <Arrow /></a>
+        <a className="motion-all" href="/motion">查看完整影片与创作过程 <Arrow /></a>
       </section>
 
       <section className="home-contact stack-panel" id="contact">

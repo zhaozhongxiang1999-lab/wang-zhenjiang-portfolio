@@ -246,11 +246,6 @@ img { display:block; max-width:100%; }
 .film-process figcaption b { grid-row:1 / span 2; color:var(--orange); font:400 16px Georgia,serif; }
 .film-process figcaption span { font-size:11px; }
 .film-process figcaption small { margin-top:6px; color:#756d66; font-size:8px; letter-spacing:.1em; }
-.film-frames { margin-top:18px; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
-.film-frames figure { position:relative; margin:0; overflow:hidden; background:#090807; }
-.film-frames img { display:block; width:100%; aspect-ratio:16/9; object-fit:cover; transition:.6s cubic-bezier(.16,1,.3,1); }
-.film-frames figure:hover img { transform:scale(1.035); }
-.film-frames span { position:absolute; right:12px; bottom:10px; width:29px; height:29px; display:grid; place-items:center; border-radius:50%; background:rgba(0,0,0,.66); color:#e7b07d; font:10px Georgia,serif; }
 .motion-note { padding:100px clamp(24px,7vw,110px); display:grid; grid-template-columns:.7fr 1.3fr; gap:10vw; }
 .motion-note span { color:var(--orange); font-size:11px; letter-spacing:.17em; }
 .motion-note p { margin:0; width:min(650px,100%); color:#9d9288; font-size:14px; line-height:2; }
@@ -372,8 +367,6 @@ img { display:block; max-width:100%; }
   .film-story>div+div { margin-top:42px; }
   .film-process.has-editing { grid-template-columns:1fr; }
   .film-process figcaption { padding:17px; }
-  .film-frames { gap:6px; }
-  .film-frames span { right:7px; bottom:6px; width:24px; height:24px; }
   .motion-note { padding:80px 23px; display:block; }
   .motion-note p { margin-top:30px; }
 }

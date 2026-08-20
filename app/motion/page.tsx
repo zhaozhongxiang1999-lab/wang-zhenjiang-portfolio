@@ -7,8 +7,8 @@ const films = [
     eyebrow: "AIGC ANIMATION / SILENT COMEDY",
     title: "小蜜蜂",
     subtitle: "《默剧》· 无对白动画短片",
-    duration: "精选片段 00:20 / 原片 04:15",
-    preview: "/motion/bee-preview.mp4",
+    duration: "完整影片 04:15",
+    preview: "/motion/bee-full.mp4",
     poster: "/motion/bee-poster.jpg",
     captions: "/motion/bee-captions.vtt",
     workflow: "/motion/bee-workflow.jpg",
@@ -23,8 +23,8 @@ const films = [
     eyebrow: "AIGC FILM / EMOTIONAL STORY",
     title: "爷爷的愿望",
     subtitle: "情感叙事短片",
-    duration: "精选片段 00:23 / 原片 03:01",
-    preview: "/motion/grandpa-preview.mp4",
+    duration: "完整影片 03:01",
+    preview: "/motion/grandpa-full.mp4",
     poster: "/motion/grandpa-poster.jpg",
     captions: "/motion/grandpa-captions.vtt",
     workflow: "/motion/grandpa-workflow.jpg",
@@ -39,8 +39,8 @@ const films = [
     eyebrow: "AIGC FILM / DARK FANTASY",
     title: "我叫舒画",
     subtitle: "《十日终焉》角色短篇",
-    duration: "精选片段 00:21 / 原片 01:17",
-    preview: "/motion/shuhua-preview.mp4",
+    duration: "完整影片 01:17",
+    preview: "/motion/shuhua-full.mp4",
     poster: "/motion/shuhua-poster.jpg",
     captions: "/motion/shuhua-captions.vtt",
     workflow: "/motion/shuhua-workflow.jpg",
@@ -62,7 +62,7 @@ export default function MotionPage() {
       <section className="motion-head">
         <small>MOTION LAB / 2026</small>
         <h1>AIGC 短片<br /><em>叙事与剪辑</em></h1>
-        <p>从轻喜剧、亲情叙事到暗黑幻想，三部短片以精选片段呈现。每个项目保留关键画面与生成工作流，让成片之外的创作方法也被看见。</p>
+        <p>从轻喜剧、亲情叙事到暗黑幻想，三部短片均以完整版本呈现。每个项目同时保留生成工作流，让成片之外的创作方法也被看见。</p>
       </section>
 
       <nav className="film-index" aria-label="短片目录">
@@ -83,7 +83,7 @@ export default function MotionPage() {
                 <track kind="captions" src={film.captions} srcLang="zh" label="中文字幕" />
                 你的浏览器暂不支持视频播放。
               </video>
-              <figcaption><span>SELECTED CUT</span><small>点击播放精选片段 · 建议开启声音</small></figcaption>
+              <figcaption><span>FULL FILM</span><small>点击播放完整影片 · 建议开启声音</small></figcaption>
             </figure>
 
             <div className="film-story">
@@ -96,14 +96,11 @@ export default function MotionPage() {
               {film.process ? <figure><img src={film.process} alt={`${film.title} 剪辑工程时间线`} loading="lazy" /><figcaption><b>02</b><span>剪辑流程</span><small>镜头筛选、声音与节奏控制</small></figcaption></figure> : null}
             </div>
 
-            <div className="film-frames" aria-label={`${film.title} 精彩画面`}>
-              {[1, 2, 3].map((frame) => <figure key={frame}><img src={`/motion/${film.id}-frame-0${frame}.jpg`} alt={`${film.title} 精彩画面 ${frame}`} loading="lazy" /><span>0{frame}</span></figure>)}
-            </div>
           </article>
         ))}
       </section>
 
-      <section className="motion-note"><span>展示方式</span><p>网页使用轻量精选片段，兼顾画质与加载速度；完整原片保留在本地素材库。后续新增动态作品时，可以继续按“精选片段 + 过程 + 关键帧”的结构扩展。</p></section>
+      <section className="motion-note"><span>展示方式</span><p>三部短片均提供网页优化后的完整版本，在保留完整叙事的同时控制加载体积。后续新增动态作品时，也可以继续按“完整影片 + 创作过程”的结构扩展。</p></section>
       <Link className="next-project motion-back" href="/#work"><small>BACK TO PROJECTS</small><span>继续浏览</span><h2>平面作品</h2><b>→</b></Link>
     </main>
   );
