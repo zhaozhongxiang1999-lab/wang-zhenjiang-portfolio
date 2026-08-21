@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const films = [
   {
     id: "bee",
@@ -53,10 +51,10 @@ const films = [
 
 export default function MotionPage() {
   return (
-    <main className="motion-page">
+    <main className="motion-page" id="motion-top">
       <header className="detail-nav">
-        <Link href="/" className="wordmark"><strong>WZJ</strong><span>王振江<br />AI VISUAL DESIGNER</span></Link>
-        <Link href="/">← 返回首页</Link>
+        <a href="/" className="wordmark"><strong>WZJ</strong><span>王振江<br />AI VISUAL DESIGNER</span></a>
+        <a href="/">← 返回首页</a>
       </header>
 
       <section className="motion-head">
@@ -101,7 +99,12 @@ export default function MotionPage() {
       </section>
 
       <section className="motion-note"><span>展示方式</span><p>三部短片均提供网页优化后的完整版本，在保留完整叙事的同时控制加载体积。后续新增动态作品时，也可以继续按“完整影片 + 创作过程”的结构扩展。</p></section>
-      <Link className="next-project motion-back" href="/#work"><small>BACK TO PROJECTS</small><span>继续浏览</span><h2>平面作品</h2><b>→</b></Link>
+      <nav className="motion-bottom-nav" aria-label="动态作品页面导航">
+        <a href="/">退出动态页 · 返回首页</a>
+        <a href="/#work">返回作品目录</a>
+        <a href="#motion-top">回到顶部 ↑</a>
+      </nav>
+      <a className="next-project motion-back" href="/#work"><small>BACK TO PROJECTS</small><span>继续浏览</span><h2>平面作品</h2><b>→</b></a>
     </main>
   );
 }
