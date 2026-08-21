@@ -4,10 +4,15 @@ import { projects } from "./project-data";
 export default function ProjectDetail({ project }: { project: Project }) {
   const index = projects.findIndex((item) => item.slug === project.slug);
   const next = projects[(index + 1) % projects.length];
-  const galleryImages = project.images.slice(2);
-  const galleryRows = Array.from({ length: Math.ceil(galleryImages.length / 2) }, (_, rowIndex) =>
-    galleryImages.slice(rowIndex * 2, rowIndex * 2 + 2),
-  );
+  const galleryItems = project.images.slice(2).map((image, index) => ({ image, index: index + 2 }));
+  const galleryRows: typeof galleryItems[] = [];
+  for (let cursor = 0; cursor < galleryItems.length;) {
+    const item = galleryItems[cursor];
+    const isFullWidth = project.fullWidthFrom !== undefined && item.index >= project.fullWidthFrom;
+    const rowSize = isFullWidth ? 1 : 2;
+    galleryRows.push(galleryItems.slice(cursor, cursor + rowSize));
+    cursor += rowSize;
+  }
 
   return (
     <main className="detail-page">
@@ -40,11 +45,18 @@ export default function ProjectDetail({ project }: { project: Project }) {
             <img src={project.images[1]} alt={`${project.title}项目展示 2`} loading="lazy" />
           </figure>
         )}
-        <div className="detail-rows">
+        {project.fullWidthFrom !== undefined && (
+          <div className="complete-gallery-intro">
+            <small>COMPLETE CASE STUDY</small>
+            <h3>完整方案展示</h3>
+            <p>从概念推导、视觉系统到应用落地，以下按原作品集顺序完整呈现。</p>
+          </div>
+        )}
+        <div className={`detail-rows${project.fullWidthFrom !== undefined ? " complete-detail-rows" : ""}`}>
           {galleryRows.map((row, rowIndex) => (
             <div className={`detail-row${row.length === 1 ? " detail-row-single" : ""}`} key={rowIndex}>
-              {row.map((image, imageIndex) => {
-                const aspect = project.imageAspects[rowIndex * 2 + imageIndex + 2] ?? 16 / 9;
+              {row.map(({ image, index: imageIndex }) => {
+                const aspect = project.imageAspects[imageIndex] ?? 16 / 9;
                 return (
                 <figure key={image} style={{ flexGrow: aspect, aspectRatio: String(aspect) }}>
                   <img src={image} alt={`${project.title}项目展示`} loading="lazy" />
