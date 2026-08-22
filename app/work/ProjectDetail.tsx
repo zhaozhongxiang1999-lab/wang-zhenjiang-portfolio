@@ -4,7 +4,7 @@ import { projects } from "./project-data";
 export default function ProjectDetail({ project }: { project: Project }) {
   const index = projects.findIndex((item) => item.slug === project.slug);
   const next = projects[(index + 1) % projects.length];
-  const galleryItems = project.images.slice(2).map((image, index) => ({ image, index: index + 2 }));
+  const galleryItems = project.images.slice(1).map((image, index) => ({ image, index: index + 1 }));
   const galleryRows: typeof galleryItems[] = [];
   for (let cursor = 0; cursor < galleryItems.length;) {
     const item = galleryItems[cursor];
@@ -40,11 +40,6 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
       <section className="detail-gallery">
         <header className="detail-gallery-head"><small>SELECTED VISUALS</small><span>{project.images.length - 1} PROJECT FRAMES</span></header>
-        {project.images[1] && (
-          <figure className="gallery-feature">
-            <img src={project.images[1]} alt={`${project.title}项目展示 2`} loading="lazy" />
-          </figure>
-        )}
         {project.fullWidthFrom !== undefined && (
           <div className="complete-gallery-intro">
             <small>COMPLETE CASE STUDY</small>

@@ -202,8 +202,7 @@ img { display:block; max-width:100%; }
 .detail-gallery-head small { color:#9c653c; font-size:8px; letter-spacing:.24em; }
 .detail-gallery-head span { font-size:8px; letter-spacing:.2em; }
 .detail-gallery figure { margin:0; overflow:hidden; background:#beb4a7; }
-.detail-gallery img { width:100%; height:auto; transition:.8s; }
-.detail-gallery figure:hover img { transform:scale(1.012); }
+.detail-gallery img { width:100%; height:auto; pointer-events:none; user-select:none; -webkit-user-drag:none; }
 .gallery-feature { width:100%; margin-bottom:clamp(12px,2vw,28px)!important; }
 .complete-gallery-intro { min-height:230px; padding:clamp(55px,7vw,100px) clamp(18px,4vw,58px); display:grid; grid-template-columns:.7fr 1fr 1.2fr; align-items:end; gap:5vw; color:#211b17; background:#e8e1d6; border-top:1px solid rgba(91,72,57,.16); }
 .complete-gallery-intro small { align-self:start; color:#a05f32; font-size:8px; letter-spacing:.24em; }

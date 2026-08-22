@@ -43,11 +43,11 @@ export default function Home() {
             <a className="menu-card menu-about" href="#about">
               <small>01 / PROFILE</small><h1>关于王振江</h1><span>品牌设计师 · 河北邯郸</span><Arrow />
             </a>
-            <a className="menu-card menu-work" href="#work">
-              <small>02 / PROJECTS</small><h2>精选项目</h2><span>5 个完整案例</span><Arrow />
-            </a>
             <a className="menu-card menu-philosophy" href="#philosophy">
-              <small>03 / APPROACH</small><h2>设计理念</h2><span>连接品牌与人</span><Arrow />
+              <small>02 / APPROACH</small><h2>设计理念</h2><span>连接品牌与人</span><Arrow />
+            </a>
+            <a className="menu-card menu-work" href="#work">
+              <small>03 / PROJECTS</small><h2>精选项目</h2><span>5 个完整案例</span><Arrow />
             </a>
             <a className="menu-card menu-motion" href="#motion">
               <small>04 / MOTION LAB</small><h2>动态作品</h2><span>预留视频展映空间</span><Arrow />
@@ -97,9 +97,15 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="philosophy stack-panel" id="philosophy">
+        <div className="eyebrow"><b>02</b> DESIGN APPROACH</div>
+        <blockquote>“好的设计应建立人与品牌之间的情感连接，让用户在看到设计时，理解其背后的故事和理念。”</blockquote>
+        <div className="philosophy-steps"><span><b>01</b>洞察</span><span><b>02</b>策略</span><span><b>03</b>视觉</span><span><b>04</b>体验</span></div>
+      </section>
+
       <section className="selected stack-panel" id="work">
         <header className="selected-head">
-          <div className="eyebrow"><b>02</b> SELECTED WORK</div>
+          <div className="eyebrow"><b>03</b> SELECTED WORK</div>
           <h2>从视觉识别到<br />完整品牌体验。</h2>
           <p>点击项目进入详情页</p>
         </header>
@@ -114,12 +120,6 @@ export default function Home() {
             </a>
           ))}
         </div>
-      </section>
-
-      <section className="philosophy stack-panel" id="philosophy">
-        <div className="eyebrow"><b>03</b> DESIGN APPROACH</div>
-        <blockquote>“好的设计应建立人与品牌之间的情感连接，让用户在看到设计时，理解其背后的故事和理念。”</blockquote>
-        <div className="philosophy-steps"><span><b>01</b>洞察</span><span><b>02</b>策略</span><span><b>03</b>视觉</span><span><b>04</b>体验</span></div>
       </section>
 
       <section className="motion-preview stack-panel" id="motion">
