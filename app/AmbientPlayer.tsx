@@ -6,6 +6,7 @@ type PlayerStatus = "off" | "waiting" | "playing";
 
 export default function AmbientPlayer() {
   const [isMotionPage, setIsMotionPage] = useState(false);
+  const [isProjectPage, setIsProjectPage] = useState(false);
   const [enabled, setEnabled] = useState(true);
   const [status, setStatus] = useState<PlayerStatus>("waiting");
   const audioRef = useRef<HTMLAudioElement | null>(null);
@@ -40,9 +41,11 @@ export default function AmbientPlayer() {
 
   useEffect(() => {
     const motion = window.location.pathname.replace(/\/$/, "").endsWith("/motion");
+    const projectPage = window.location.pathname.includes("/work/");
     const preference = window.localStorage.getItem("portfolio-ambient-music") !== "off";
     queueMicrotask(() => {
       setIsMotionPage(motion);
+      setIsProjectPage(projectPage);
       setEnabled(preference);
       if (motion || !preference) setStatus("off");
     });
@@ -82,7 +85,7 @@ export default function AmbientPlayer() {
   const label = !enabled ? "音乐已关闭" : status === "playing" ? "舒缓轻音乐" : "点击播放音乐";
   return (
     <button
-      className={`ambient-player ${enabled && status === "playing" ? "is-playing" : ""}`}
+      className={`ambient-player${isProjectPage ? " is-project" : ""}${enabled && status === "playing" ? " is-playing" : ""}`}
       type="button"
       onClick={toggle}
       aria-pressed={enabled}
