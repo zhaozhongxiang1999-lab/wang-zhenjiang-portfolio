@@ -38,15 +38,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
         <ul>{project.services.map((service) => <li key={service}>{service}</li>)}</ul>
       </section>
 
-      <section className="detail-gallery">
-        <header className="detail-gallery-head"><small>SELECTED VISUALS</small><span>{project.images.length - 1} PROJECT FRAMES</span></header>
-        {project.fullWidthFrom !== undefined && (
-          <div className="complete-gallery-intro">
-            <small>COMPLETE CASE STUDY</small>
-            <h3>完整方案展示</h3>
-            <p>从概念推导、视觉系统到应用落地，以下按原作品集顺序完整呈现。</p>
-          </div>
-        )}
+      <section className="detail-gallery" aria-label={`${project.title}完整作品展示`}>
         <div className={`detail-rows${project.fullWidthFrom !== undefined ? " complete-detail-rows" : ""}`}>
           {galleryRows.map((row, rowIndex) => (
             <div className={`detail-row${row.length === 1 ? " detail-row-single" : ""}`} key={rowIndex}>

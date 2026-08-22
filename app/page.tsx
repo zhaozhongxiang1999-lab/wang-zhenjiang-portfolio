@@ -41,16 +41,35 @@ export default function Home() {
 
           <div className="hero-menu">
             <a className="menu-card menu-about" href="#about">
-              <small>01 / PROFILE</small><h1>关于王振江</h1><span>品牌设计师 · 河北邯郸</span><Arrow />
+              <div className="menu-cover menu-cover-about" aria-hidden="true">
+                <img src="/assets/about.webp" alt="" />
+                <span>AI × BRAND</span>
+              </div>
+              <small>01 / PROFILE</small><h1>关于王振江</h1><span className="menu-subtitle">品牌设计师 · 河北邯郸</span><Arrow />
             </a>
             <a className="menu-card menu-philosophy" href="#philosophy">
-              <small>02 / APPROACH</small><h2>设计理念</h2><span>连接品牌与人</span><Arrow />
+              <div className="menu-cover menu-cover-philosophy" aria-hidden="true">
+                <div className="approach-mark">A</div>
+                <div className="approach-track"><span>洞察</span><span>策略</span><span>视觉</span><span>体验</span></div>
+              </div>
+              <small>02 / APPROACH</small><h2>设计理念</h2><span className="menu-subtitle">连接品牌与人</span><Arrow />
             </a>
             <a className="menu-card menu-work" href="#work">
-              <small>03 / PROJECTS</small><h2>精选项目</h2><span>5 个完整案例</span><Arrow />
+              <div className="menu-cover menu-cover-work" aria-hidden="true">
+                <img src="/projects/cdn/01.webp" alt="" />
+                <img src="/projects/guihe/01.webp" alt="" />
+                <img src="/projects/type/01.webp" alt="" />
+                <img src="/projects/xiaoxiao/01.webp" alt="" />
+              </div>
+              <small>03 / PROJECTS</small><h2>精选项目</h2><span className="menu-subtitle">5 个完整案例</span><Arrow />
             </a>
             <a className="menu-card menu-motion" href="#motion">
-              <small>04 / MOTION LAB</small><h2>动态作品</h2><span>预留视频展映空间</span><Arrow />
+              <div className="menu-cover menu-cover-motion" aria-hidden="true">
+                <img src="/motion/bee-poster.jpg" alt="" />
+                <img src="/motion/grandpa-poster.jpg" alt="" />
+                <img src="/motion/shuhua-poster.jpg" alt="" />
+              </div>
+              <small>04 / MOTION LAB</small><h2>动态作品</h2><span className="menu-subtitle">3 部 AIGC 完整短片</span><Arrow />
             </a>
           </div>
         </div>
