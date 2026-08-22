@@ -16,27 +16,11 @@ export default function ProjectDetail({ project }: { project: Project }) {
 
   return (
     <main className="detail-page">
-      <header className="detail-nav">
+      <header className="detail-nav project-detail-nav">
         <a href="/" className="wordmark"><strong>WZJ</strong><span>王振江<br />BRAND DESIGNER</span></a>
+        <div className="project-nav-title"><span>{project.number}</span><strong>{project.title}</strong><small>{project.category}</small></div>
         <a href="/#work">← 返回全部项目</a>
       </header>
-      <section className="detail-hero">
-        <img src={project.images[0]} alt={`${project.title}项目主视觉`} />
-        <div className="detail-shade" />
-        <div className="detail-title"><small>{project.category} / {project.year}</small><h1>{project.title}</h1><p>{project.en}</p></div>
-        <span className="detail-number">{project.number}</span>
-        <div className="detail-hero-stats">
-          <span><small>OUTPUT</small>{project.images.length} VISUALS</span>
-          <span><small>SCOPE</small>{project.services.length} FIELDS</span>
-          <span><small>EXPLORE</small>SCROLL ↓</span>
-        </div>
-      </section>
-
-      <section className="detail-intro">
-        <div><small>PROJECT OVERVIEW</small><h2>{project.summary}</h2></div>
-        <p>{project.intro}</p>
-        <ul>{project.services.map((service) => <li key={service}>{service}</li>)}</ul>
-      </section>
 
       <section className="detail-gallery" aria-label={`${project.title}完整作品展示`}>
         <div className={`detail-rows${project.fullWidthFrom !== undefined ? " complete-detail-rows" : ""}`}>
@@ -46,7 +30,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
                 const aspect = project.imageAspects[imageIndex] ?? 16 / 9;
                 return (
                 <figure key={image} style={{ flexGrow: aspect, aspectRatio: String(aspect) }}>
-                  <img src={image} alt={`${project.title}项目展示`} loading="lazy" />
+                  <img src={image} alt={`${project.title}项目展示`} loading={rowIndex === 0 ? "eager" : "lazy"} fetchPriority={rowIndex === 0 ? "high" : "auto"} />
                 </figure>
                 );
               })}
