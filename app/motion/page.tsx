@@ -47,6 +47,22 @@ const films = [
     role: "文本改编、角色设定、场景搭建、关键帧控制、AIGC 生成、后期剪辑",
     tags: ["写实暗调", "角色系统", "氛围营造", "后期剪辑"],
   },
+  {
+    id: "abao-grandpa",
+    no: "04",
+    eyebrow: "AIGC FILM / FAMILY MEMORY",
+    title: "阿宝与爷爷",
+    subtitle: "跨越成长的亲情叙事短片",
+    duration: "完整影片 06:43",
+    preview: "https://zhaozhongxiang1999-lab.github.io/motion/abao-grandpa-full.mp4",
+    poster: "/motion/abao-grandpa-workflow.png",
+    captions: null,
+    workflow: "/motion/abao-grandpa-workflow.png",
+    process: null,
+    summary: "以阿宝与爷爷跨越童年与成年的陪伴为线索，从木制玩具、乡村生活延伸到成年后的飞行员身份与病床重逢，在暖棕与冷蓝的色调转换中讲述记忆、成长与亲情。",
+    role: "故事梳理、分镜规划、角色一致性、场景搭建、AIGC 生成、声音与后期剪辑",
+    tags: ["亲情叙事", "跨年龄角色", "场景一致性", "生成工作流"],
+  },
 ];
 
 export default function MotionPage() {
@@ -60,7 +76,7 @@ export default function MotionPage() {
       <section className="motion-head">
         <small>MOTION LAB / 2026</small>
         <h1>AIGC 短片<br /><em>叙事与剪辑</em></h1>
-        <p>从轻喜剧、亲情叙事到暗黑幻想，三部短片均以完整版本呈现。每个项目同时保留生成工作流，让成片之外的创作方法也被看见。</p>
+        <p>从轻喜剧、亲情叙事到暗黑幻想，四部短片均以完整版本呈现。每个项目同时保留生成工作流，让成片之外的创作方法也被看见。</p>
       </section>
 
       <nav className="film-index" aria-label="短片目录">
@@ -78,7 +94,7 @@ export default function MotionPage() {
             <figure className="film-player">
               <video controls playsInline preload="metadata" poster={film.poster}>
                 <source src={film.preview} type="video/mp4" />
-                <track kind="captions" src={film.captions} srcLang="zh" label="中文字幕" />
+                {film.captions ? <track kind="captions" src={film.captions} srcLang="zh" label="中文字幕" /> : null}
                 你的浏览器暂不支持视频播放。
               </video>
               <figcaption><span>FULL FILM</span><small>点击播放完整影片 · 建议开启声音</small></figcaption>
@@ -98,7 +114,7 @@ export default function MotionPage() {
         ))}
       </section>
 
-      <section className="motion-note"><span>展示方式</span><p>三部短片均提供网页优化后的完整版本，在保留完整叙事的同时控制加载体积。后续新增动态作品时，也可以继续按“完整影片 + 创作过程”的结构扩展。</p></section>
+      <section className="motion-note"><span>展示方式</span><p>四部短片均以完整版本呈现，并保留生成工作流或剪辑过程，让成片与创作方法可以被同步了解。</p></section>
       <nav className="motion-bottom-nav" aria-label="动态作品页面导航">
         <a href="/">退出动态页 · 返回首页</a>
         <a href="/#work">返回作品目录</a>

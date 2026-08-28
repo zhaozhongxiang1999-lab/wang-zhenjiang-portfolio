@@ -68,8 +68,9 @@ export default function Home() {
                 <img src="/motion/bee-poster.jpg" alt="" />
                 <img src="/motion/grandpa-poster.jpg" alt="" />
                 <img src="/motion/shuhua-poster.jpg" alt="" />
+                <img src="/motion/abao-grandpa-workflow.png" alt="" />
               </div>
-              <small>04 / MOTION LAB</small><h2>动态作品</h2><span className="menu-subtitle">3 部 AIGC 完整短片</span><Arrow />
+              <small>04 / MOTION LAB</small><h2>动态作品</h2><span className="menu-subtitle">4 部 AIGC 完整短片</span><Arrow />
             </a>
           </div>
         </div>
@@ -144,8 +145,8 @@ export default function Home() {
       <section className="motion-preview stack-panel" id="motion">
         <header className="motion-screen-head">
           <div className="eyebrow"><b>04</b> MOTION LAB</div>
-          <h2>AIGC 短片<br /><em>三部展映。</em></h2>
-          <p>从轻喜剧、情感叙事到暗黑幻想，三部完整短片与生成工作流集中展映。</p>
+          <h2>AIGC 短片<br /><em>四部展映。</em></h2>
+          <p>从轻喜剧、情感叙事到暗黑幻想，四部完整短片与生成工作流集中展映。</p>
         </header>
         <div className="motion-screen-stage">
           <a className="motion-main-slot" href="/motion#bee" aria-label="查看小蜜蜂短片">
@@ -158,6 +159,7 @@ export default function Home() {
           <div className="motion-side-slots">
             <a href="/motion#grandpa"><img className="motion-slot-poster" src="/motion/grandpa-poster.jpg" alt="" /><span>02</span><div><small>EMOTIONAL STORY</small><strong>《爷爷的愿望》</strong></div><Arrow /></a>
             <a href="/motion#shuhua"><img className="motion-slot-poster" src="/motion/shuhua-poster.jpg" alt="" /><span>03</span><div><small>DARK FANTASY</small><strong>《我叫舒画》</strong></div><Arrow /></a>
+            <a href="/motion#abao-grandpa"><img className="motion-slot-poster" src="/motion/abao-grandpa-workflow.png" alt="" /><span>04</span><div><small>FAMILY MEMORY</small><strong>《阿宝与爷爷》</strong></div><Arrow /></a>
           </div>
         </div>
         <a className="motion-all" href="/motion">查看完整影片与创作过程 <Arrow /></a>
