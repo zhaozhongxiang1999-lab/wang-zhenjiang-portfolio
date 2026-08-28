@@ -55,7 +55,7 @@ const films = [
     subtitle: "跨越成长的亲情叙事短片",
     duration: "完整影片 06:43",
     preview: "https://zhaozhongxiang1999-lab.github.io/motion/abao-grandpa-full.mp4",
-    poster: "/motion/abao-grandpa-workflow.png",
+    poster: "/motion/abao-grandpa-poster.jpg",
     captions: null,
     workflow: "/motion/abao-grandpa-workflow.png",
     process: null,
