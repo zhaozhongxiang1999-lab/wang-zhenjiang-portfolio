@@ -23,13 +23,13 @@ export default function Home() {
             <strong>WZJ</strong><span>王振江<br />BRAND DESIGNER</span>
           </a>
           <nav aria-label="主要导航">
-            <a href="#work">作品</a><a href="#motion">动态</a><a href="#about">关于</a>
+            <a href="#motion">动态</a><a href="#work">作品</a><a href="#about">关于</a>
           </nav>
           <a className="nav-contact" href="mailto:2898870015@qq.com">联系我 <Arrow /></a>
         </header>
 
         <div className="hero-layout">
-          <a className="hero-feature" href="#work" aria-label="浏览精选项目">
+          <a className="hero-feature" href="#motion" aria-label="浏览动态与静态作品">
             <div className="hero-rings" aria-hidden="true" />
             <div className="hero-feature-copy">
               <small>SELECTED PORTFOLIO</small>
@@ -61,7 +61,7 @@ export default function Home() {
                 <img src="/projects/type/01.webp" alt="" />
                 <img src="/projects/xiaoxiao/01.webp" alt="" />
               </div>
-              <small>03 / PROJECTS</small><h2>精选项目</h2><span className="menu-subtitle">5 个完整案例</span><Arrow />
+              <small>04 / PROJECTS</small><h2>精选项目</h2><span className="menu-subtitle">5 个完整案例</span><Arrow />
             </a>
             <a className="menu-card menu-motion" href="#motion">
               <div className="menu-cover menu-cover-motion" aria-hidden="true">
@@ -70,7 +70,7 @@ export default function Home() {
                 <img src="/motion/shuhua-poster.jpg" alt="" />
                 <img src="/motion/abao-grandpa-poster.jpg" alt="" />
               </div>
-              <small>04 / MOTION LAB</small><h2>动态作品</h2><span className="menu-subtitle">4 部 AIGC 完整短片</span><Arrow />
+              <small>03 / MOTION LAB</small><h2>动态作品</h2><span className="menu-subtitle">4 部 AIGC 完整短片</span><Arrow />
             </a>
           </div>
         </div>
@@ -123,28 +123,9 @@ export default function Home() {
         <div className="philosophy-steps"><span><b>01</b>洞察</span><span><b>02</b>策略</span><span><b>03</b>视觉</span><span><b>04</b>体验</span></div>
       </section>
 
-      <section className="selected stack-panel" id="work">
-        <header className="selected-head">
-          <div className="eyebrow"><b>03</b> SELECTED WORK</div>
-          <h2>从视觉识别到<br />完整品牌体验。</h2>
-          <p>点击项目进入详情页</p>
-        </header>
-        <div className="project-index">
-          {projects.map((project, index) => (
-            <a className="project-row" href={`/work/${project.slug}`} key={project.slug}>
-              <div className="project-thumb"><img src={project.cover} alt="" loading={index > 1 ? "lazy" : "eager"} /></div>
-              <span className="project-number">{project.number}</span>
-              <div className="project-name"><small>{project.category}</small><h3>{project.title}</h3><span>{project.en}</span></div>
-              <p>{project.summary}</p>
-              <div className="project-open">查看案例 <Arrow /></div>
-            </a>
-          ))}
-        </div>
-      </section>
-
       <section className="motion-preview stack-panel" id="motion">
         <header className="motion-screen-head">
-          <div className="eyebrow"><b>04</b> MOTION LAB</div>
+          <div className="eyebrow"><b>03</b> MOTION LAB</div>
           <h2>AIGC 短片<br /><em>四部展映。</em></h2>
           <p>从轻喜剧、情感叙事到暗黑幻想，四部完整短片与生成工作流集中展映。</p>
         </header>
@@ -163,6 +144,25 @@ export default function Home() {
           </div>
         </div>
         <a className="motion-all" href="/motion">查看完整影片与创作过程 <Arrow /></a>
+      </section>
+
+      <section className="selected stack-panel" id="work">
+        <header className="selected-head">
+          <div className="eyebrow"><b>04</b> SELECTED WORK</div>
+          <h2>从视觉识别到<br />完整品牌体验。</h2>
+          <p>点击项目进入详情页</p>
+        </header>
+        <div className="project-index">
+          {projects.map((project, index) => (
+            <a className="project-row" href={`/work/${project.slug}`} key={project.slug}>
+              <div className="project-thumb"><img src={project.cover} alt="" loading={index > 1 ? "lazy" : "eager"} /></div>
+              <span className="project-number">{project.number}</span>
+              <div className="project-name"><small>{project.category}</small><h3>{project.title}</h3><span>{project.en}</span></div>
+              <p>{project.summary}</p>
+              <div className="project-open">查看案例 <Arrow /></div>
+            </a>
+          ))}
+        </div>
       </section>
 
       <section className="home-contact stack-panel" id="contact">
